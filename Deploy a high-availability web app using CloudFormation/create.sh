@@ -1,0 +1,1 @@
+aws cloudformation create-stack --stack-name Tawadrous --template-body file://network.yml  --parameters file://params.json --capabilities "CAPABILITY_IAM" "CAPABILITY_NAMED_IAM" --region=us-west-2
