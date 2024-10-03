@@ -1,0 +1,45 @@
+package com.example;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class HelloWorld {
+
+    // Unused variable
+    private int unusedVariable;
+
+    public static void main(String[] args) {
+        HelloWorld helloWorld = new HelloWorld();
+        helloWorld.sayHello();
+
+        // Duplicated code
+        String hardCodedPassword1 = "password123"; // Hardcoded value
+        System.out.println("Password: " + hardCodedPassword1);
+
+        String hardCodedPassword2 = "password123"; // Duplicate code
+        System.out.println("Password: " + hardCodedPassword2);
+
+        // Error-prone code: null pointer dereference
+        String nullString = null;
+        System.out.println(nullString.length()); // This will throw a NullPointerException
+
+        // Empty catch block
+        try {
+            int result = 10 / 0; // Division by zero
+        } catch (Exception e) {
+            // Empty catch block
+        }
+    }
+
+    // Method with a code smell (unused method)
+    public void sayHello() {
+        System.out.println("Hello, World!");
+    }
+
+    // Function with inefficient list creation
+    public List<String> inefficientListCreation() {
+        List<String> list = new ArrayList<>(); // Inefficient as it's always returning an empty list
+        return list;
+    }
+
+}
